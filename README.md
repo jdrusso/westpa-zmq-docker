@@ -3,6 +3,8 @@
 This repo demonstrates using Docker with WESTPA's ZMQ work manager.
 There is a ZMQ head container, and any number of ZMQ workers which connect to it.
 
+Credit where credit is due: The bulk of these dockerfiles was prepared by GPT4, accessed through ChatGPT.
+
 
 ## Running this example
 
