@@ -1,6 +1,15 @@
 #!/bin/sh
 
+#source /opt/conda/etc/profile.d/conda.sh
+#conda activate base
+
 SERVER_INFO="west_zmq_info.json"
+
+#echo "I am $(whoami)"
+#echo "Activating mamba"
+#micromamba activate base
+
+#python -c "import simtk"
 
 cd /data
 

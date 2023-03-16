@@ -17,7 +17,6 @@ services:
     command: /app/entrypoint-head.sh
     volumes:
       - /home/jd/research/chatgpt_westpa/shared_data:/data
-      - /home/jd/research/SynD:/synd
 
   worker:
     build:
@@ -25,11 +24,14 @@ services:
       dockerfile: Dockerfile.worker
     depends_on:
       - head_node
+    image: test-worker
     environment:
       - "WEST_SIM_ROOT=/data"
       - "MASTER_ADDRESS=head_node:9000"
       - "HDF5_USE_FILE_LOCKING=FALSE"
+      - "MAMBA_ROOT_PREFIX=/opt/conda"
+      - "PATH=/opt/conda/bin:${PATH}"
     command: /app/entrypoint-worker.sh
     volumes:
       - /home/jd/research/chatgpt_westpa/shared_data:/data
-      - /home/jd/research/SynD:/synd
+    tty: true
