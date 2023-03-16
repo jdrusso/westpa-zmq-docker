@@ -19,3 +19,5 @@ Run WESTPA with Docker+ZMQ
 1. `docker compose build`
 1. `docker compose up --scale worker=<desired number of ZMQ workers>`
 
+**Extra credit: Change the amount of workers while it's running!**
+`docker compose up --no-recreate --scale worker=<new number of ZMQ workers>`
