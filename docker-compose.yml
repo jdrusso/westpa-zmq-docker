@@ -17,7 +17,6 @@ services:
     command: /app/entrypoint-head.sh
     volumes:
       - /home/jd/research/chatgpt_westpa/shared_data:/data
-      - /home/jd/research/SynD:/synd
 
   worker:
     build:
@@ -32,4 +31,3 @@ services:
     command: /app/entrypoint-worker.sh
     volumes:
       - /home/jd/research/chatgpt_westpa/shared_data:/data
-      - /home/jd/research/SynD:/synd
