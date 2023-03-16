@@ -27,13 +27,13 @@ python nacl_prod.py
 python $WEST_SIM_ROOT/common_files/get_distance.py
 cat dist.dat > $WEST_PCOORD_RETURN
 
-cp bstate.pdb $WEST_TRAJECTORY_RETURN
-cp seg.dcd $WEST_TRAJECTORY_RETURN
+#cp bstate.pdb $WEST_TRAJECTORY_RETURN
+#cp seg.dcd $WEST_TRAJECTORY_RETURN
 
-cp bstate.pdb $WEST_RESTART_RETURN
-cp seg.xml $WEST_RESTART_RETURN/parent.xml
+#cp bstate.pdb $WEST_RESTART_RETURN
+#cp seg.xml $WEST_RESTART_RETURN/parent.xml
 
-cp seg.log $WEST_LOG_RETURN
+#cp seg.log $WEST_LOG_RETURN
 
 # Clean up
 rm -f dist.dat nacl_prod.py
