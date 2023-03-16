@@ -7,8 +7,6 @@ RUN apt-get update && \
         zlib1g-dev \
         git
 
-ADD SynD /synd
-
 RUN pip install --no-cache-dir \
         westpa \
         pyzmq \
