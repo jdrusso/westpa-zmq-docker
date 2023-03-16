@@ -16,7 +16,7 @@ services:
       - "HDF5_USE_FILE_LOCKING=FALSE"
     command: /app/entrypoint-head.sh
     volumes:
-      - /home/jd/research/chatgpt_westpa/shared_data:/data
+      - ./shared_data:/data
 
   worker:
     build:
@@ -33,5 +33,5 @@ services:
       - "PATH=/opt/conda/bin:${PATH}"
     command: /app/entrypoint-worker.sh
     volumes:
-      - /home/jd/research/chatgpt_westpa/shared_data:/data
+      - ./shared_data:/data
     tty: true
