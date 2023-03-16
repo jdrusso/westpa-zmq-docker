@@ -15,7 +15,7 @@ Initialize the WESTPA simulation
 1. `w_init --bstate-file bstates/bstates.txt --segs-per-state 1 --tstate-file tstate.file`
 
 Run WESTPA with Docker+ZMQ
-1. `cd westpa_zmq_docker_example`
+1. `cd westpa-zmq-docker`
 1. `docker compose build`
 1. `docker compose up --scale worker=<desired number of ZMQ workers>`
 
