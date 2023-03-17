@@ -8,19 +8,13 @@ Credit where credit is due: The bulk of these dockerfiles was prepared by GPT4, 
 
 ## Running this example
 
-0. Clone the repo
-
-Initialize the WESTPA simulation
-1. `cd westpa-zmq-docker/shared_data`
-1. `w_init --bstate-file bstates/bstates.txt --segs-per-state 1 --tstate-file tstate.file`
-
-Run WESTPA with Docker+ZMQ
-1. `cd westpa-zmq-docker`
-1. `docker compose build`
-1. `docker compose up --scale worker=<desired number of ZMQ workers>`
-
-**Extra credit: Increase the amount of workers while it's running!**
-
-`docker compose up --no-recreate --scale worker=<new number of ZMQ workers>`
-
-Note that removing workers is not yet supported -- WESTPA expects its workers to stick around.
+0. Clone the repo on your cluster (contains a pre-initialized `west.h5`)
+1. Launch the ZMQ head, and one worker
+    ```
+    cd westpa-zmq-docker
+    sbatch run.slurm
+    ```
+2. (Optional) Launch additional workers on new nodes
+    ```
+    sbatch add_workers.slurm
+    ```
